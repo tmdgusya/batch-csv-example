@@ -16,6 +16,14 @@ repositories {
 	mavenCentral()
 }
 
+allOpen {
+	annotation("javax.persistence.Entity")
+}
+
+noArg {
+	annotation("javax.persistence.Entity")
+}
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-batch")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
