@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:8.0
+    restart: always
+    container_name: batchcsv
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_DATABASE=batchcsv
+      - MYSQL_ROOT_PASSWORD=1234
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
